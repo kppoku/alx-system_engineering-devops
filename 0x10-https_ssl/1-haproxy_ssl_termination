@@ -40,14 +40,14 @@ frontend bereket.tech-http-frontend
 	default_backend	 beta-scribbles.tech-backend
 
 
-frontend  bereket.tech-https-frontend
+frontend  kofipoku.tech-https-frontend
 	bind *:443 ssl crt /etc/ssl/beta-scribbles.tech.pem
 	http-request set-header X-Forwarded-Proto https
         default_backend beta-scribbles.tech-backend
 
 
-backend bereket.tech-backend
+backend kofipoku.tech-backend
 	balance roundrobin
-	server 61115-web-01 54.157.142.215:80 check
-	server 61115-web-02 35.153.83.8:80 check
+	server 241654-web-01 54.160.123.106:80 check
+	server 241654-web-02 52.204.94.235:80 check
 # end of parameters
