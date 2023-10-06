@@ -33,21 +33,21 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-# start of parameters for bereket.tech
-frontend bereket.tech-http-frontend
-	bind	 *:80
-	http-request set-header X-Forwarded-Proto http
-	default_backend	 beta-scribbles.tech-backend
+#--kofipoku.tech-params-begin--
 
 
-frontend  kofipoku.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/beta-scribbles.tech.pem
+frontend kofipoku.tech-http-frontend
+        bind *:80
+        http-request set_header X-Forwarded-Proto http
+        default_backend kofipoku.tech-backend
+
+frontend kofipoku.tech-https-frontend
+	bind *:443 ssl crt /etc/letsencrypt/live/www.kofipoku.tech/fullchain.pem
 	http-request set-header X-Forwarded-Proto https
-        default_backend beta-scribbles.tech-backend
+	default_backend kofipoku.tech-backend
 
-
-backend kofipoku.tech-backend
-	balance roundrobin
-	server 241654-web-01 54.160.123.106:80 check
-	server 241654-web-02 52.204.94.235:80 check
-# end of parameters
+backend kofipoku-backend
+        balance roundrobin
+        server 241654-web-01 54.160.123.106 check
+        server 241654-web-02 52.204.94.235 check
+#--kofipoku.tech-params-end--
