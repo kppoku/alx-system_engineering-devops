@@ -1,0 +1,20 @@
+When you're typing a web address like "www.google.com" in a web browser's address bar, pressing the "g" key will simply input the character "g" into the address bar. It's treated as a regular text input at that point. Typing "www.google.com" would be a sequence of individual keypresses, each corresponding to a letter or symbol, and pressing "g" will insert that letter into the address bar.
+
+So, when you type "www.google.com," the input would look like this as you press each key:
+
+- Type "w" -> Input: "w"
+- Type "w" -> Input: "ww"
+- Type "w" -> Input: "www"
+- Type "." -> Input: "www."
+- Type "g" -> Input: "www.g"
+- Type "o" -> Input: "www.go"
+- Type "o" -> Input: "www.goo"
+- Type "g" -> Input: "www.goog"
+- Type "l" -> Input: "www.googl"
+- Type "e" -> Input: "www.google"
+- Type "." -> Input: "www.google."
+- Type "c" -> Input: "www.google.c"
+- Type "o" -> Input: "www.google.co"
+- Type "m" -> Input: "www.google.com"
+
+In this process, each keypress adds the corresponding character to the address bar, eventually forming the complete web address "www.google.com" that you want to visit. After typing the full address, you would typically press "Enter" to navigate to the website.

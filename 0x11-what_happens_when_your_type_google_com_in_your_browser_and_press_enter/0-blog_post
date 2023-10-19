@@ -1,0 +1,32 @@
+Have you ever wondered what exactly happens when you type a URL like "https://www.google.com" into your web browser and hit the Enter key? It might seem like magic, but in reality, it's a fascinating journey of data and communication protocols. In this blog post, we'll take a closer look at the step-by-step process that occurs behind the scenes when you initiate a web request.
+
+DNS Resolution
+The journey begins with the Domain Name System (DNS). When you type "https://www.google.com" in your browser's address bar, your browser doesn't know the IP address of the server hosting Google's website. Instead, it sends a request to a DNS server to resolve the domain name "www.google.com" into an IP address. The DNS server responds with the IP address of Google's web server.
+
+Initiating the TCP Connection
+Once your browser knows the IP address of the destination server, it initiates a Transmission Control Protocol (TCP) connection to the server. This connection is established on a specific port, typically port 443 for HTTPS, which is a secure version of HTTP.
+
+SSL/TLS Handshake
+For secure connections, such as HTTPS, an SSL/TLS (Secure Sockets Layer/Transport Layer Security) handshake is performed. During this handshake, your browser and the server exchange encryption keys to ensure that data sent between them is secure and cannot be intercepted by malicious actors.
+
+Sending the HTTP Request
+With the connection established and secured, your browser sends an HTTP request to the server. This request typically includes information like the type of request (GET, POST, etc.), the URL, and various headers that provide details about the request, such as the user agent and accepted content types.
+
+Web Server Processing
+On the server side, Google's web server processes the HTTP request. It interprets the request, retrieves the requested web page (in this case, Google's homepage), and prepares a response.
+
+Sending the HTTP Response
+The server, having processed the request, sends an HTTP response back to your browser. This response includes the requested web page's HTML content, as well as additional information such as status codes, headers, and cookies.
+
+Rendering the Web Page
+Once your browser receives the HTTP response, it starts rendering the web page. This involves parsing the HTML content, downloading any additional resources (such as images, stylesheets, and scripts), and rendering the page in your browser window.
+
+Interactivity and JavaScript
+Modern web pages often rely on JavaScript to provide interactivity. Your browser executes JavaScript code included in the web page, enabling features like dynamic content, interactive forms, and other client-side functionalities.
+
+Caching and Optimizations
+To improve performance and reduce load times, browsers often cache resources like images and stylesheets. This means that on subsequent visits to the same website, your browser can use locally stored copies of these resources instead of requesting them from the server again.
+
+Conclusion
+
+The process of what happens when you type "https://www.google.com" in your browser and press Enter is a complex sequence of events involving DNS resolution, TCP connections, encryption, HTTP requests and responses, and rendering web content. While it may seem like a simple action, the technology and protocols working behind the scenes ensure a fast and secure browsing experience. Understanding this process can help you appreciate the intricate world of web communication and the technologies that power the internet.
